@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SOCCERDAYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="M_Floor">
+          <Key>
+            <PropertyRef Name="F_CD" />
+          </Key>
+          <Property Name="F_CD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="F_Type" Type="varchar" MaxLength="50" />
+          <Property Name="F_IsDeleted" Type="bit" />
+          <Property Name="F_InsertOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="F_InsertOPTDateTime" Type="datetime" />
+          <Property Name="F_UpdateOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="F_UpdateOPTDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Offers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M_Offers">
+          <Key>
+            <PropertyRef Name="O_CD" />
+          </Key>
+          <Property Name="O_CD" Type="int" Nullable="false" />
+          <Property Name="O_Type" Type="varbinary" MaxLength="50" />
+          <Property Name="O_IsDeleted" Type="bit" />
+          <Property Name="O_InsertOPT_CD" Type="varchar" MaxLength="50" />
+          <Property Name="O_InsertOPT_Datetime" Type="datetime" />
+          <Property Name="O_UpdateOPT_CD" Type="varchar" MaxLength="50" />
+          <Property Name="O_UpdateOPT_DateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Payment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M_Payment">
+          <Key>
+            <PropertyRef Name="P_ID" />
+          </Key>
+          <Property Name="P_ID" Type="int" Nullable="false" />
+          <Property Name="P_Type" Type="varchar" MaxLength="50" />
+          <Property Name="P_IsDeleted" Type="bit" />
+          <Property Name="P_InsertOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="P_InsertOPTDateTime" Type="datetime" />
+          <Property Name="P_UpdateOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="P_UpdateOPTDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Roof' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M_Roof">
+          <Key>
+            <PropertyRef Name="R_CD" />
+          </Key>
+          <Property Name="R_CD" Type="int" Nullable="false" />
+          <Property Name="R_Type" Type="varchar" MaxLength="50" />
+          <Property Name="R_IsDeleted" Type="bit" />
+          <Property Name="R_InsertOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="R_InsetOPTDateTime" Type="datetime" />
+          <Property Name="R_UpdateOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="R_UpdateOPTDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="M_TownShp">
+          <Key>
+            <PropertyRef Name="T_CD" />
+          </Key>
+          <Property Name="T_CD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="T_Type" Type="varchar" MaxLength="50" />
+          <Property Name="T_IsDeleted" Type="bit" />
+          <Property Name="T_InsertOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="T_InsertOPTDateTime" Type="datetime" />
+          <Property Name="T_UpdateOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="T_UpdateOPTDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Transportation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="M_Transportation">
+          <Key>
+            <PropertyRef Name="T_CD" />
+          </Key>
+          <Property Name="T_CD" Type="int" Nullable="false" />
+          <Property Name="T_Type" Type="varchar" MaxLength="50" />
+          <Property Name="T_Isdeleted" Type="bit" />
+          <Property Name="T_InsertOPT_CD" Type="varchar" MaxLength="50" />
+          <Property Name="T_InsertOPT_DateTime" Type="datetime" />
+          <Property Name="T_UpdateOPT_CD" Type="varchar" MaxLength="50" />
+          <Property Name="T_UpdateOPT_DateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_Booking' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Master_Booking">
+          <Key>
+            <PropertyRef Name="Booking_CD" />
+          </Key>
+          <Property Name="Booking_CD" Type="int" Nullable="false" />
+          <Property Name="Booking_STD_CD" Type="int" />
+          <Property Name="Booking_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Booking_Time" Type="time" Precision="7" />
+          <Property Name="Booking_Date" Type="datetime" />
+          <Property Name="Booking_Flag_CD" Type="tinyint" />
+          <Property Name="Booking_Isdeleted" Type="bit" />
+          <Property Name="Booking_Insert_OPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="Booking_Insert_OPTDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_OPT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Master_OPT">
+          <Key>
+            <PropertyRef Name="OPT_CD" />
+          </Key>
+          <Property Name="OPT_CD" Type="int" Nullable="false" />
+          <Property Name="OPT_ID" Type="varchar" MaxLength="10" />
+          <Property Name="OPT_Name" Type="varchar" MaxLength="50" />
+          <Property Name="OPT_Password" Type="varchar" MaxLength="15" />
+          <Property Name="OPT_Level_CD" Type="int" />
+          <Property Name="OPT_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="OPT_Photo" Type="binary" MaxLength="500" />
+          <Property Name="OPT_Owner" Type="bit" />
+          <Property Name="OPT_Address" Type="varchar" MaxLength="500" />
+          <Property Name="OPT_Comment" Type="varchar" MaxLength="500" />
+          <Property Name="OPT_IsDeleted" Type="bit" />
+          <Property Name="OPT_Insert_OPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="OPT_Insert_OPTDateTime" Type="datetime" />
+          <Property Name="OPT_Update_OPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="OPT_Update_OPTDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_STD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Master_STD">
+          <Key>
+            <PropertyRef Name="STD_CD" />
+          </Key>
+          <Property Name="STD_CD" Type="int" Nullable="false" />
+          <Property Name="STD_OPT_CD" Type="int" />
+          <Property Name="STD_Name" Type="varchar" MaxLength="50" />
+          <Property Name="STD_Owner" Type="bit" />
+          <Property Name="STD_Map" Type="geography" />
+          <Property Name="STD_Photos" Type="binary" MaxLength="1024" />
+          <Property Name="STD_Transportation_CD" Type="int" />
+          <Property Name="STD_Offers_CD" Type="int" />
+          <Property Name="STD_Fees" Type="money" />
+          <Property Name="STD_Discount" Type="money" />
+          <Property Name="STD_FloorType_CD" Type="varchar" MaxLength="50" />
+          <Property Name="STD_Roof_CD" Type="int" />
+          <Property Name="STD_RatingLevel" Type="tinyint" />
+          <Property Name="STD_PhoneNo" Type="varchar" MaxLength="50" />
+          <Property Name="STD_TownShip_CD" Type="int" />
+          <Property Name="STD_Comment" Type="varchar" MaxLength="500" />
+          <Property Name="STD_PayMentType_CD" Type="int" />
+          <Property Name="STD_LocationAddress" Type="varchar" MaxLength="200" />
+          <Property Name="STD_FBAddress" Type="varchar" MaxLength="50" />
+          <Property Name="STD_WebSiteAddress" Type="varchar" MaxLength="50" />
+          <Property Name="STD_EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="STD_IsDeleted" Type="bit" />
+          <Property Name="STD_InsertOPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="STD_InsertOPTDateTime" Type="datetime" />
+          <Property Name="STD_Update_OPTCD" Type="varchar" MaxLength="50" />
+          <Property Name="STD_Update_OPTDateTime" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="SOCCERDAYModelStoreContainer">
+          <EntitySet Name="M_Floor" EntityType="Self.M_Floor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_TownShp" EntityType="Self.M_TownShp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_Offers" EntityType="Self.M_Offers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M_Offers].[O_CD] AS [O_CD], 
+    [M_Offers].[O_Type] AS [O_Type], 
+    [M_Offers].[O_IsDeleted] AS [O_IsDeleted], 
+    [M_Offers].[O_InsertOPT_CD] AS [O_InsertOPT_CD], 
+    [M_Offers].[O_InsertOPT_Datetime] AS [O_InsertOPT_Datetime], 
+    [M_Offers].[O_UpdateOPT_CD] AS [O_UpdateOPT_CD], 
+    [M_Offers].[O_UpdateOPT_DateTime] AS [O_UpdateOPT_DateTime]
+    FROM [dbo].[M_Offers] AS [M_Offers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M_Payment" EntityType="Self.M_Payment" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M_Payment].[P_ID] AS [P_ID], 
+    [M_Payment].[P_Type] AS [P_Type], 
+    [M_Payment].[P_IsDeleted] AS [P_IsDeleted], 
+    [M_Payment].[P_InsertOPTCD] AS [P_InsertOPTCD], 
+    [M_Payment].[P_InsertOPTDateTime] AS [P_InsertOPTDateTime], 
+    [M_Payment].[P_UpdateOPTCD] AS [P_UpdateOPTCD], 
+    [M_Payment].[P_UpdateOPTDateTime] AS [P_UpdateOPTDateTime]
+    FROM [dbo].[M_Payment] AS [M_Payment]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M_Roof" EntityType="Self.M_Roof" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M_Roof].[R_CD] AS [R_CD], 
+    [M_Roof].[R_Type] AS [R_Type], 
+    [M_Roof].[R_IsDeleted] AS [R_IsDeleted], 
+    [M_Roof].[R_InsertOPTCD] AS [R_InsertOPTCD], 
+    [M_Roof].[R_InsetOPTDateTime] AS [R_InsetOPTDateTime], 
+    [M_Roof].[R_UpdateOPTCD] AS [R_UpdateOPTCD], 
+    [M_Roof].[R_UpdateOPTDateTime] AS [R_UpdateOPTDateTime]
+    FROM [dbo].[M_Roof] AS [M_Roof]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M_Transportation" EntityType="Self.M_Transportation" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [M_Transportation].[T_CD] AS [T_CD], 
+    [M_Transportation].[T_Type] AS [T_Type], 
+    [M_Transportation].[T_Isdeleted] AS [T_Isdeleted], 
+    [M_Transportation].[T_InsertOPT_CD] AS [T_InsertOPT_CD], 
+    [M_Transportation].[T_InsertOPT_DateTime] AS [T_InsertOPT_DateTime], 
+    [M_Transportation].[T_UpdateOPT_CD] AS [T_UpdateOPT_CD], 
+    [M_Transportation].[T_UpdateOPT_DateTime] AS [T_UpdateOPT_DateTime]
+    FROM [dbo].[M_Transportation] AS [M_Transportation]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Master_Booking" EntityType="Self.Master_Booking" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Master_Booking].[Booking_CD] AS [Booking_CD], 
+    [Master_Booking].[Booking_STD_CD] AS [Booking_STD_CD], 
+    [Master_Booking].[Booking_Name] AS [Booking_Name], 
+    [Master_Booking].[Booking_Time] AS [Booking_Time], 
+    [Master_Booking].[Booking_Date] AS [Booking_Date], 
+    [Master_Booking].[Booking_Flag_CD] AS [Booking_Flag_CD], 
+    [Master_Booking].[Booking_Isdeleted] AS [Booking_Isdeleted], 
+    [Master_Booking].[Booking_Insert_OPTCD] AS [Booking_Insert_OPTCD], 
+    [Master_Booking].[Booking_Insert_OPTDateTime] AS [Booking_Insert_OPTDateTime]
+    FROM [dbo].[Master_Booking] AS [Master_Booking]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Master_OPT" EntityType="Self.Master_OPT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Master_OPT].[OPT_CD] AS [OPT_CD], 
+    [Master_OPT].[OPT_ID] AS [OPT_ID], 
+    [Master_OPT].[OPT_Name] AS [OPT_Name], 
+    [Master_OPT].[OPT_Password] AS [OPT_Password], 
+    [Master_OPT].[OPT_Level_CD] AS [OPT_Level_CD], 
+    [Master_OPT].[OPT_Phone] AS [OPT_Phone], 
+    [Master_OPT].[OPT_Photo] AS [OPT_Photo], 
+    [Master_OPT].[OPT_Owner] AS [OPT_Owner], 
+    [Master_OPT].[OPT_Address] AS [OPT_Address], 
+    [Master_OPT].[OPT_Comment] AS [OPT_Comment], 
+    [Master_OPT].[OPT_IsDeleted] AS [OPT_IsDeleted], 
+    [Master_OPT].[OPT_Insert_OPTCD] AS [OPT_Insert_OPTCD], 
+    [Master_OPT].[OPT_Insert_OPTDateTime] AS [OPT_Insert_OPTDateTime], 
+    [Master_OPT].[OPT_Update_OPTCD] AS [OPT_Update_OPTCD], 
+    [Master_OPT].[OPT_Update_OPTDateTime] AS [OPT_Update_OPTDateTime]
+    FROM [dbo].[Master_OPT] AS [Master_OPT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Master_STD" EntityType="Self.Master_STD" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Master_STD].[STD_CD] AS [STD_CD], 
+    [Master_STD].[STD_OPT_CD] AS [STD_OPT_CD], 
+    [Master_STD].[STD_Name] AS [STD_Name], 
+    [Master_STD].[STD_Owner] AS [STD_Owner], 
+    [Master_STD].[STD_Map] AS [STD_Map], 
+    [Master_STD].[STD_Photos] AS [STD_Photos], 
+    [Master_STD].[STD_Transportation_CD] AS [STD_Transportation_CD], 
+    [Master_STD].[STD_Offers_CD] AS [STD_Offers_CD], 
+    [Master_STD].[STD_Fees] AS [STD_Fees], 
+    [Master_STD].[STD_Discount] AS [STD_Discount], 
+    [Master_STD].[STD_FloorType_CD] AS [STD_FloorType_CD], 
+    [Master_STD].[STD_Roof_CD] AS [STD_Roof_CD], 
+    [Master_STD].[STD_RatingLevel] AS [STD_RatingLevel], 
+    [Master_STD].[STD_PhoneNo] AS [STD_PhoneNo], 
+    [Master_STD].[STD_TownShip_CD] AS [STD_TownShip_CD], 
+    [Master_STD].[STD_Comment] AS [STD_Comment], 
+    [Master_STD].[STD_PayMentType_CD] AS [STD_PayMentType_CD], 
+    [Master_STD].[STD_LocationAddress] AS [STD_LocationAddress], 
+    [Master_STD].[STD_FBAddress] AS [STD_FBAddress], 
+    [Master_STD].[STD_WebSiteAddress] AS [STD_WebSiteAddress], 
+    [Master_STD].[STD_EmailAddress] AS [STD_EmailAddress], 
+    [Master_STD].[STD_IsDeleted] AS [STD_IsDeleted], 
+    [Master_STD].[STD_InsertOPTCD] AS [STD_InsertOPTCD], 
+    [Master_STD].[STD_InsertOPTDateTime] AS [STD_InsertOPTDateTime], 
+    [Master_STD].[STD_Update_OPTCD] AS [STD_Update_OPTCD], 
+    [Master_STD].[STD_Update_OPTDateTime] AS [STD_Update_OPTDateTime]
+    FROM [dbo].[Master_STD] AS [Master_STD]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SOCCERDAYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="M_Floor">
+          <Key>
+            <PropertyRef Name="F_CD" />
+          </Key>
+          <Property Name="F_CD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_IsDeleted" Type="Boolean" />
+          <Property Name="F_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_InsertOPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="F_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="M_TownShp">
+          <Key>
+            <PropertyRef Name="T_CD" />
+          </Key>
+          <Property Name="T_CD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="T_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_IsDeleted" Type="Boolean" />
+          <Property Name="T_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_InsertOPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="T_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="M_Offers">
+          <Key>
+            <PropertyRef Name="O_CD" />
+          </Key>
+          <Property Name="O_CD" Type="Int32" Nullable="false" />
+          <Property Name="O_Type" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="O_IsDeleted" Type="Boolean" />
+          <Property Name="O_InsertOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="O_InsertOPT_Datetime" Type="DateTime" Precision="3" />
+          <Property Name="O_UpdateOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="O_UpdateOPT_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="M_Payment">
+          <Key>
+            <PropertyRef Name="P_ID" />
+          </Key>
+          <Property Name="P_ID" Type="Int32" Nullable="false" />
+          <Property Name="P_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_IsDeleted" Type="Boolean" />
+          <Property Name="P_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_InsertOPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="P_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="M_Roof">
+          <Key>
+            <PropertyRef Name="R_CD" />
+          </Key>
+          <Property Name="R_CD" Type="Int32" Nullable="false" />
+          <Property Name="R_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_IsDeleted" Type="Boolean" />
+          <Property Name="R_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_InsetOPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="R_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="M_Transportation">
+          <Key>
+            <PropertyRef Name="T_CD" />
+          </Key>
+          <Property Name="T_CD" Type="Int32" Nullable="false" />
+          <Property Name="T_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_Isdeleted" Type="Boolean" />
+          <Property Name="T_InsertOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_InsertOPT_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="T_UpdateOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_UpdateOPT_DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Master_Booking">
+          <Key>
+            <PropertyRef Name="Booking_CD" />
+          </Key>
+          <Property Name="Booking_CD" Type="Int32" Nullable="false" />
+          <Property Name="Booking_STD_CD" Type="Int32" />
+          <Property Name="Booking_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Booking_Time" Type="Time" Precision="7" />
+          <Property Name="Booking_Date" Type="DateTime" Precision="3" />
+          <Property Name="Booking_Flag_CD" Type="Byte" />
+          <Property Name="Booking_Isdeleted" Type="Boolean" />
+          <Property Name="Booking_Insert_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Booking_Insert_OPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Master_OPT">
+          <Key>
+            <PropertyRef Name="OPT_CD" />
+          </Key>
+          <Property Name="OPT_CD" Type="Int32" Nullable="false" />
+          <Property Name="OPT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Level_CD" Type="Int32" />
+          <Property Name="OPT_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Photo" Type="Binary" MaxLength="500" FixedLength="true" />
+          <Property Name="OPT_Owner" Type="Boolean" />
+          <Property Name="OPT_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_IsDeleted" Type="Boolean" />
+          <Property Name="OPT_Insert_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Insert_OPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OPT_Update_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPT_Update_OPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Master_STD">
+          <Key>
+            <PropertyRef Name="STD_CD" />
+          </Key>
+          <Property Name="STD_CD" Type="Int32" Nullable="false" />
+          <Property Name="STD_OPT_CD" Type="Int32" />
+          <Property Name="STD_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_Owner" Type="Boolean" />
+          <Property Name="STD_Map" Type="Geography" />
+          <Property Name="STD_Photos" Type="Binary" MaxLength="1024" FixedLength="true" />
+          <Property Name="STD_Transportation_CD" Type="Int32" />
+          <Property Name="STD_Offers_CD" Type="Int32" />
+          <Property Name="STD_Fees" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="STD_Discount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="STD_FloorType_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_Roof_CD" Type="Int32" />
+          <Property Name="STD_RatingLevel" Type="Byte" />
+          <Property Name="STD_PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_TownShip_CD" Type="Int32" />
+          <Property Name="STD_Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="STD_PayMentType_CD" Type="Int32" />
+          <Property Name="STD_LocationAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="STD_FBAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_WebSiteAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_IsDeleted" Type="Boolean" />
+          <Property Name="STD_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_InsertOPTDateTime" Type="DateTime" Precision="3" />
+          <Property Name="STD_Update_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_Update_OPTDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="SOCCERDAYEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="M_Floor" EntityType="Self.M_Floor" />
+          <EntitySet Name="M_TownShp" EntityType="Self.M_TownShp" />
+          <EntitySet Name="M_Offers" EntityType="Self.M_Offers" />
+          <EntitySet Name="M_Payment" EntityType="Self.M_Payment" />
+          <EntitySet Name="M_Roof" EntityType="Self.M_Roof" />
+          <EntitySet Name="M_Transportation" EntityType="Self.M_Transportation" />
+          <EntitySet Name="Master_Booking" EntityType="Self.Master_Booking" />
+          <EntitySet Name="Master_OPT" EntityType="Self.Master_OPT" />
+          <EntitySet Name="Master_STD" EntityType="Self.Master_STD" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SOCCERDAYModelStoreContainer" CdmEntityContainer="SOCCERDAYEntities2">
+          <EntitySetMapping Name="M_Floor">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_Floor">
+              <MappingFragment StoreEntitySet="M_Floor">
+                <ScalarProperty Name="F_CD" ColumnName="F_CD" />
+                <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+                <ScalarProperty Name="F_IsDeleted" ColumnName="F_IsDeleted" />
+                <ScalarProperty Name="F_InsertOPTCD" ColumnName="F_InsertOPTCD" />
+                <ScalarProperty Name="F_InsertOPTDateTime" ColumnName="F_InsertOPTDateTime" />
+                <ScalarProperty Name="F_UpdateOPTCD" ColumnName="F_UpdateOPTCD" />
+                <ScalarProperty Name="F_UpdateOPTDateTime" ColumnName="F_UpdateOPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_TownShp">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_TownShp">
+              <MappingFragment StoreEntitySet="M_TownShp">
+                <ScalarProperty Name="T_CD" ColumnName="T_CD" />
+                <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+                <ScalarProperty Name="T_IsDeleted" ColumnName="T_IsDeleted" />
+                <ScalarProperty Name="T_InsertOPTCD" ColumnName="T_InsertOPTCD" />
+                <ScalarProperty Name="T_InsertOPTDateTime" ColumnName="T_InsertOPTDateTime" />
+                <ScalarProperty Name="T_UpdateOPTCD" ColumnName="T_UpdateOPTCD" />
+                <ScalarProperty Name="T_UpdateOPTDateTime" ColumnName="T_UpdateOPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Offers">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_Offers">
+              <MappingFragment StoreEntitySet="M_Offers">
+                <ScalarProperty Name="O_CD" ColumnName="O_CD" />
+                <ScalarProperty Name="O_Type" ColumnName="O_Type" />
+                <ScalarProperty Name="O_IsDeleted" ColumnName="O_IsDeleted" />
+                <ScalarProperty Name="O_InsertOPT_CD" ColumnName="O_InsertOPT_CD" />
+                <ScalarProperty Name="O_InsertOPT_Datetime" ColumnName="O_InsertOPT_Datetime" />
+                <ScalarProperty Name="O_UpdateOPT_CD" ColumnName="O_UpdateOPT_CD" />
+                <ScalarProperty Name="O_UpdateOPT_DateTime" ColumnName="O_UpdateOPT_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Payment">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_Payment">
+              <MappingFragment StoreEntitySet="M_Payment">
+                <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+                <ScalarProperty Name="P_Type" ColumnName="P_Type" />
+                <ScalarProperty Name="P_IsDeleted" ColumnName="P_IsDeleted" />
+                <ScalarProperty Name="P_InsertOPTCD" ColumnName="P_InsertOPTCD" />
+                <ScalarProperty Name="P_InsertOPTDateTime" ColumnName="P_InsertOPTDateTime" />
+                <ScalarProperty Name="P_UpdateOPTCD" ColumnName="P_UpdateOPTCD" />
+                <ScalarProperty Name="P_UpdateOPTDateTime" ColumnName="P_UpdateOPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Roof">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_Roof">
+              <MappingFragment StoreEntitySet="M_Roof">
+                <ScalarProperty Name="R_CD" ColumnName="R_CD" />
+                <ScalarProperty Name="R_Type" ColumnName="R_Type" />
+                <ScalarProperty Name="R_IsDeleted" ColumnName="R_IsDeleted" />
+                <ScalarProperty Name="R_InsertOPTCD" ColumnName="R_InsertOPTCD" />
+                <ScalarProperty Name="R_InsetOPTDateTime" ColumnName="R_InsetOPTDateTime" />
+                <ScalarProperty Name="R_UpdateOPTCD" ColumnName="R_UpdateOPTCD" />
+                <ScalarProperty Name="R_UpdateOPTDateTime" ColumnName="R_UpdateOPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Transportation">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.M_Transportation">
+              <MappingFragment StoreEntitySet="M_Transportation">
+                <ScalarProperty Name="T_CD" ColumnName="T_CD" />
+                <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+                <ScalarProperty Name="T_Isdeleted" ColumnName="T_Isdeleted" />
+                <ScalarProperty Name="T_InsertOPT_CD" ColumnName="T_InsertOPT_CD" />
+                <ScalarProperty Name="T_InsertOPT_DateTime" ColumnName="T_InsertOPT_DateTime" />
+                <ScalarProperty Name="T_UpdateOPT_CD" ColumnName="T_UpdateOPT_CD" />
+                <ScalarProperty Name="T_UpdateOPT_DateTime" ColumnName="T_UpdateOPT_DateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Master_Booking">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.Master_Booking">
+              <MappingFragment StoreEntitySet="Master_Booking">
+                <ScalarProperty Name="Booking_CD" ColumnName="Booking_CD" />
+                <ScalarProperty Name="Booking_STD_CD" ColumnName="Booking_STD_CD" />
+                <ScalarProperty Name="Booking_Name" ColumnName="Booking_Name" />
+                <ScalarProperty Name="Booking_Time" ColumnName="Booking_Time" />
+                <ScalarProperty Name="Booking_Date" ColumnName="Booking_Date" />
+                <ScalarProperty Name="Booking_Flag_CD" ColumnName="Booking_Flag_CD" />
+                <ScalarProperty Name="Booking_Isdeleted" ColumnName="Booking_Isdeleted" />
+                <ScalarProperty Name="Booking_Insert_OPTCD" ColumnName="Booking_Insert_OPTCD" />
+                <ScalarProperty Name="Booking_Insert_OPTDateTime" ColumnName="Booking_Insert_OPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Master_OPT">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.Master_OPT">
+              <MappingFragment StoreEntitySet="Master_OPT">
+                <ScalarProperty Name="OPT_CD" ColumnName="OPT_CD" />
+                <ScalarProperty Name="OPT_ID" ColumnName="OPT_ID" />
+                <ScalarProperty Name="OPT_Name" ColumnName="OPT_Name" />
+                <ScalarProperty Name="OPT_Password" ColumnName="OPT_Password" />
+                <ScalarProperty Name="OPT_Level_CD" ColumnName="OPT_Level_CD" />
+                <ScalarProperty Name="OPT_Phone" ColumnName="OPT_Phone" />
+                <ScalarProperty Name="OPT_Photo" ColumnName="OPT_Photo" />
+                <ScalarProperty Name="OPT_Owner" ColumnName="OPT_Owner" />
+                <ScalarProperty Name="OPT_Address" ColumnName="OPT_Address" />
+                <ScalarProperty Name="OPT_Comment" ColumnName="OPT_Comment" />
+                <ScalarProperty Name="OPT_IsDeleted" ColumnName="OPT_IsDeleted" />
+                <ScalarProperty Name="OPT_Insert_OPTCD" ColumnName="OPT_Insert_OPTCD" />
+                <ScalarProperty Name="OPT_Insert_OPTDateTime" ColumnName="OPT_Insert_OPTDateTime" />
+                <ScalarProperty Name="OPT_Update_OPTCD" ColumnName="OPT_Update_OPTCD" />
+                <ScalarProperty Name="OPT_Update_OPTDateTime" ColumnName="OPT_Update_OPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Master_STD">
+            <EntityTypeMapping TypeName="SOCCERDAYModel.Master_STD">
+              <MappingFragment StoreEntitySet="Master_STD">
+                <ScalarProperty Name="STD_CD" ColumnName="STD_CD" />
+                <ScalarProperty Name="STD_OPT_CD" ColumnName="STD_OPT_CD" />
+                <ScalarProperty Name="STD_Name" ColumnName="STD_Name" />
+                <ScalarProperty Name="STD_Owner" ColumnName="STD_Owner" />
+                <ScalarProperty Name="STD_Map" ColumnName="STD_Map" />
+                <ScalarProperty Name="STD_Photos" ColumnName="STD_Photos" />
+                <ScalarProperty Name="STD_Transportation_CD" ColumnName="STD_Transportation_CD" />
+                <ScalarProperty Name="STD_Offers_CD" ColumnName="STD_Offers_CD" />
+                <ScalarProperty Name="STD_Fees" ColumnName="STD_Fees" />
+                <ScalarProperty Name="STD_Discount" ColumnName="STD_Discount" />
+                <ScalarProperty Name="STD_FloorType_CD" ColumnName="STD_FloorType_CD" />
+                <ScalarProperty Name="STD_Roof_CD" ColumnName="STD_Roof_CD" />
+                <ScalarProperty Name="STD_RatingLevel" ColumnName="STD_RatingLevel" />
+                <ScalarProperty Name="STD_PhoneNo" ColumnName="STD_PhoneNo" />
+                <ScalarProperty Name="STD_TownShip_CD" ColumnName="STD_TownShip_CD" />
+                <ScalarProperty Name="STD_Comment" ColumnName="STD_Comment" />
+                <ScalarProperty Name="STD_PayMentType_CD" ColumnName="STD_PayMentType_CD" />
+                <ScalarProperty Name="STD_LocationAddress" ColumnName="STD_LocationAddress" />
+                <ScalarProperty Name="STD_FBAddress" ColumnName="STD_FBAddress" />
+                <ScalarProperty Name="STD_WebSiteAddress" ColumnName="STD_WebSiteAddress" />
+                <ScalarProperty Name="STD_EmailAddress" ColumnName="STD_EmailAddress" />
+                <ScalarProperty Name="STD_IsDeleted" ColumnName="STD_IsDeleted" />
+                <ScalarProperty Name="STD_InsertOPTCD" ColumnName="STD_InsertOPTCD" />
+                <ScalarProperty Name="STD_InsertOPTDateTime" ColumnName="STD_InsertOPTDateTime" />
+                <ScalarProperty Name="STD_Update_OPTCD" ColumnName="STD_Update_OPTCD" />
+                <ScalarProperty Name="STD_Update_OPTDateTime" ColumnName="STD_Update_OPTDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SOCCERDAYModelStoreContainer" CdmEntityContainer="SOCCERDAYEntities">
+    <EntitySetMapping Name="M_Floor">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Floor">
+        <MappingFragment StoreEntitySet="M_Floor">
+          <ScalarProperty Name="F_CD" ColumnName="F_CD" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_IsDeleted" ColumnName="F_IsDeleted" />
+          <ScalarProperty Name="F_InsertOPTCD" ColumnName="F_InsertOPTCD" />
+          <ScalarProperty Name="F_InsertOPTDateTime" ColumnName="F_InsertOPTDateTime" />
+          <ScalarProperty Name="F_UpdateOPTCD" ColumnName="F_UpdateOPTCD" />
+          <ScalarProperty Name="F_UpdateOPTDateTime" ColumnName="F_UpdateOPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

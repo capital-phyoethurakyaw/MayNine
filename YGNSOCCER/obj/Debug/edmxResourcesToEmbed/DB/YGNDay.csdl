@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SOCCERDAYModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="M_Floor">
+    <Key>
+      <PropertyRef Name="F_CD" />
+    </Key>
+    <Property Name="F_CD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_IsDeleted" Type="Boolean" />
+    <Property Name="F_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_InsertOPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="F_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_TownShp">
+    <Key>
+      <PropertyRef Name="T_CD" />
+    </Key>
+    <Property Name="T_CD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_IsDeleted" Type="Boolean" />
+    <Property Name="T_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_InsertOPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="T_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Offers">
+    <Key>
+      <PropertyRef Name="O_CD" />
+    </Key>
+    <Property Name="O_CD" Type="Int32" Nullable="false" />
+    <Property Name="O_Type" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="O_IsDeleted" Type="Boolean" />
+    <Property Name="O_InsertOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="O_InsertOPT_Datetime" Type="DateTime" Precision="3" />
+    <Property Name="O_UpdateOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="O_UpdateOPT_DateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Payment">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="Int32" Nullable="false" />
+    <Property Name="P_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="P_IsDeleted" Type="Boolean" />
+    <Property Name="P_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="P_InsertOPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="P_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="P_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Roof">
+    <Key>
+      <PropertyRef Name="R_CD" />
+    </Key>
+    <Property Name="R_CD" Type="Int32" Nullable="false" />
+    <Property Name="R_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="R_IsDeleted" Type="Boolean" />
+    <Property Name="R_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="R_InsetOPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="R_UpdateOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="R_UpdateOPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Transportation">
+    <Key>
+      <PropertyRef Name="T_CD" />
+    </Key>
+    <Property Name="T_CD" Type="Int32" Nullable="false" />
+    <Property Name="T_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_Isdeleted" Type="Boolean" />
+    <Property Name="T_InsertOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_InsertOPT_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="T_UpdateOPT_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T_UpdateOPT_DateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Master_Booking">
+    <Key>
+      <PropertyRef Name="Booking_CD" />
+    </Key>
+    <Property Name="Booking_CD" Type="Int32" Nullable="false" />
+    <Property Name="Booking_STD_CD" Type="Int32" />
+    <Property Name="Booking_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Booking_Time" Type="Time" Precision="7" />
+    <Property Name="Booking_Date" Type="DateTime" Precision="3" />
+    <Property Name="Booking_Flag_CD" Type="Byte" />
+    <Property Name="Booking_Isdeleted" Type="Boolean" />
+    <Property Name="Booking_Insert_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Booking_Insert_OPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Master_OPT">
+    <Key>
+      <PropertyRef Name="OPT_CD" />
+    </Key>
+    <Property Name="OPT_CD" Type="Int32" Nullable="false" />
+    <Property Name="OPT_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Level_CD" Type="Int32" />
+    <Property Name="OPT_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Photo" Type="Binary" MaxLength="500" FixedLength="true" />
+    <Property Name="OPT_Owner" Type="Boolean" />
+    <Property Name="OPT_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_IsDeleted" Type="Boolean" />
+    <Property Name="OPT_Insert_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Insert_OPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="OPT_Update_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT_Update_OPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Master_STD">
+    <Key>
+      <PropertyRef Name="STD_CD" />
+    </Key>
+    <Property Name="STD_CD" Type="Int32" Nullable="false" />
+    <Property Name="STD_OPT_CD" Type="Int32" />
+    <Property Name="STD_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_Owner" Type="Boolean" />
+    <Property Name="STD_Map" Type="Geography" />
+    <Property Name="STD_Photos" Type="Binary" MaxLength="1024" FixedLength="true" />
+    <Property Name="STD_Transportation_CD" Type="Int32" />
+    <Property Name="STD_Offers_CD" Type="Int32" />
+    <Property Name="STD_Fees" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="STD_Discount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="STD_FloorType_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_Roof_CD" Type="Int32" />
+    <Property Name="STD_RatingLevel" Type="Byte" />
+    <Property Name="STD_PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_TownShip_CD" Type="Int32" />
+    <Property Name="STD_Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STD_PayMentType_CD" Type="Int32" />
+    <Property Name="STD_LocationAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="STD_FBAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_WebSiteAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_IsDeleted" Type="Boolean" />
+    <Property Name="STD_InsertOPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_InsertOPTDateTime" Type="DateTime" Precision="3" />
+    <Property Name="STD_Update_OPTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STD_Update_OPTDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="SOCCERDAYEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_Floor" EntityType="Self.M_Floor" />
+    <EntitySet Name="M_TownShp" EntityType="Self.M_TownShp" />
+    <EntitySet Name="M_Offers" EntityType="Self.M_Offers" />
+    <EntitySet Name="M_Payment" EntityType="Self.M_Payment" />
+    <EntitySet Name="M_Roof" EntityType="Self.M_Roof" />
+    <EntitySet Name="M_Transportation" EntityType="Self.M_Transportation" />
+    <EntitySet Name="Master_Booking" EntityType="Self.Master_Booking" />
+    <EntitySet Name="Master_OPT" EntityType="Self.Master_OPT" />
+    <EntitySet Name="Master_STD" EntityType="Self.Master_STD" />
+  </EntityContainer>
+</Schema>

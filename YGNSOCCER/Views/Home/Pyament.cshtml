@@ -1,0 +1,65 @@
+﻿@model YGNSOCCER.Models.Common
+@{
+    ViewBag.Title = "Pyament";
+    Layout = "~/Views/Shared/_LayoutMaster1.cshtml";
+}
+
+<h2>Pyament</h2>
+        
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-2">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="tblStaff" class="hrtable col-sm-12 col-md-12">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Payment Type</th>
+                                                 
+                                                    @*<th>Company</th>
+                                                        <th>Department</th>
+                                                        <th>SubDivision</th>
+                                                        <th>Postion</th>*@
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+          
+            var table = $('#tblStaff').DataTable(
+                {
+                   
+                    //"language": {
+                    //    "info": "Display _START_ to _END_ of _TOTAL_ records",
+                    //},
+                    //"oLanguage": {
+                    //    "sLengthMenu": "Display _MENU_ records",
+                    //},
+                    "ajax": {
+                        "url": "/Home/Pyament_/",
+                        "type": "GET",
+                        "datatype": "json",
+                        "dataSrc": ""
+                    },
+                    "columns": [
+                        { "data": "P_ID", orderable: false, "width": "50%" },
+                        { "data": "P_Type", orderable: false, "width": "50%" },
+                    ],
+                }
+            );
+        })
+        </script>
+    }
+        
+

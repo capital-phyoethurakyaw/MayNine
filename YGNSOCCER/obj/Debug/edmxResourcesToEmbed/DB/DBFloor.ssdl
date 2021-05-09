@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SOCCERDAYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="M_Floor">
+    <Key>
+      <PropertyRef Name="F_CD" />
+    </Key>
+    <Property Name="F_CD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="F_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_IsDeleted" Type="bit" />
+    <Property Name="F_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="F_InsertOPTDateTime" Type="datetime" />
+    <Property Name="F_UpdateOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="F_UpdateOPTDateTime" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="SOCCERDAYModelStoreContainer">
+    <EntitySet Name="M_Floor" EntityType="Self.M_Floor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

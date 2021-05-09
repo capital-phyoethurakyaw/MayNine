@@ -1,0 +1,64 @@
+﻿@model PagedList.IPagedList<YGNSOCCER.DB.M_TownShp>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Township";
+    Layout = "~/Views/Shared/_LayoutMaster1.cshtml";
+}
+
+<h2>Township</h2>
+
+@using (Html.BeginForm("Township", "Home", FormMethod.Get, new { @id = "form1" }))
+{
+    <p>
+        Search Name: @Html.TextBox("Search_Data", ViewBag.FilterValue as string)
+        <input type="submit" value="Find" />
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.ActionLink("No", "Township", new { Filter_Value = "123", Go = "abc", id = "___" }, new { @class = "Hi", })
+            </th>
+            <th>
+                Township Name
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.T_CD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.T_Type)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Township", new { id = item.T_CD }) |
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+}
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, Page_No => Url.Action("Township", new { Page_No, Sorting_Order = ViewBag.CurrentSortOrder, Filter_Value = ViewBag.FilterValue, PageSize = ViewBag.Psize }))  Page Size: @Html.DropDownList("PageSize")
+    @*//?Page_No=2&PageSize=5*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $('#PageSize').on('change', function () {
+            window.location = "/?Page_No=1&PageSize=" + $(this).val();
+        });
+    </script>
+
+    <div id='Paging' style="text-align: center">
+        @*Dorpdownlist generation code*@
+
+    </div>

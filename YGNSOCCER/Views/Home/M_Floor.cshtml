@@ -1,0 +1,86 @@
+﻿@model YGNSOCCER.Models.Common
+@{
+    ViewBag.Title = "M_Floor";
+    Layout = "~/Views/Shared/_LayoutMaster1.cshtml";
+}
+@Html.AntiForgeryToken()
+@using (Html.BeginForm("M_Floor", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "", role = "form" }))
+{
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Floor Entry </h4>
+
+                    <label class="sr-only" for="inlineFormInputGroupUsername2">Floor Name</label>
+                    <div class="input-group mb-2 mr-sm-2" style="width: 50%;float: left;">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"></div>
+                        </div><input type="hidden" value="0" id="hdn_value" />
+                        @Html.TextBoxFor(sm => sm.Floor, new
+                   {
+                       @class = "form-control input-sm ",
+                       @tabindex = "1",
+                       @required = "required",
+                       @id = "floor",
+                       @autofocus = "autofocus",
+                       @maxlength = "100",
+                       @placeholder = ". . . "
+                   })
+                    </div>
+                    <button id="btn_smt" type="submit" class="btn btn-primary mb-2">Insert</button>   <button id="clear" type="button" class="btn btn-primary mb-2"  OnClick="Clear()"> Clear</button>
+                    <script> function Clear() { $("#floor").val(""); $("#btn_smt").text("Insert") }</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Floor</h4>
+                    <div class="table-responsive pt-3">
+                        <p id="table_value"></p>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  }
+
+
+@section Scripts{
+    
+    <script>
+           $(document).ready(function () {
+
+               $.getJSON('/Home/SelectAll_Floor',null, function (data) {
+                   var items = '<div><table class="table table-bordered"><tr><th>No</th><th>Floor Type</th><th> Setting</th></tr>';
+
+                   $.each(data, function (i, d) {
+
+                       var btn = '<td><button type="button" id="btn_' + (d.F_CD) + '" class="btn btn-primary mb-2 _edit" onClick="EditClick(this)"> Edit </button></td>';
+                       items += "<tr><td>" + (i+1 )+ "</td><td class='ftype'>" + d.F_Type +  "</td>"+btn+"</tr>";
+                   });
+                   items += "</table>";
+                   $('#table_value').html(items);
+               });
+           });
+
+
+        function GetAjax() {
+            $.post("/Home/FuckYou", null, function (data) {
+                alert(data.msg)
+            });
+        }
+        function EditClick(e) {
+            $("#hdn_value").val(String(e.id).split('_')[1]);
+            $("#floor").val($(e).closest("tr").find('.ftype').text());
+            $("#btn_smt").text("Update");
+        }
+
+    </script>
+    }

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SOCCERDAYModelStoreContainer" CdmEntityContainer="SOCCERDAYEntities2">
+    <EntitySetMapping Name="M_Floor">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Floor">
+        <MappingFragment StoreEntitySet="M_Floor">
+          <ScalarProperty Name="F_CD" ColumnName="F_CD" />
+          <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+          <ScalarProperty Name="F_IsDeleted" ColumnName="F_IsDeleted" />
+          <ScalarProperty Name="F_InsertOPTCD" ColumnName="F_InsertOPTCD" />
+          <ScalarProperty Name="F_InsertOPTDateTime" ColumnName="F_InsertOPTDateTime" />
+          <ScalarProperty Name="F_UpdateOPTCD" ColumnName="F_UpdateOPTCD" />
+          <ScalarProperty Name="F_UpdateOPTDateTime" ColumnName="F_UpdateOPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_TownShp">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_TownShp">
+        <MappingFragment StoreEntitySet="M_TownShp">
+          <ScalarProperty Name="T_CD" ColumnName="T_CD" />
+          <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+          <ScalarProperty Name="T_IsDeleted" ColumnName="T_IsDeleted" />
+          <ScalarProperty Name="T_InsertOPTCD" ColumnName="T_InsertOPTCD" />
+          <ScalarProperty Name="T_InsertOPTDateTime" ColumnName="T_InsertOPTDateTime" />
+          <ScalarProperty Name="T_UpdateOPTCD" ColumnName="T_UpdateOPTCD" />
+          <ScalarProperty Name="T_UpdateOPTDateTime" ColumnName="T_UpdateOPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Offers">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Offers">
+        <MappingFragment StoreEntitySet="M_Offers">
+          <ScalarProperty Name="O_CD" ColumnName="O_CD" />
+          <ScalarProperty Name="O_Type" ColumnName="O_Type" />
+          <ScalarProperty Name="O_IsDeleted" ColumnName="O_IsDeleted" />
+          <ScalarProperty Name="O_InsertOPT_CD" ColumnName="O_InsertOPT_CD" />
+          <ScalarProperty Name="O_InsertOPT_Datetime" ColumnName="O_InsertOPT_Datetime" />
+          <ScalarProperty Name="O_UpdateOPT_CD" ColumnName="O_UpdateOPT_CD" />
+          <ScalarProperty Name="O_UpdateOPT_DateTime" ColumnName="O_UpdateOPT_DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Payment">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Payment">
+        <MappingFragment StoreEntitySet="M_Payment">
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+          <ScalarProperty Name="P_Type" ColumnName="P_Type" />
+          <ScalarProperty Name="P_IsDeleted" ColumnName="P_IsDeleted" />
+          <ScalarProperty Name="P_InsertOPTCD" ColumnName="P_InsertOPTCD" />
+          <ScalarProperty Name="P_InsertOPTDateTime" ColumnName="P_InsertOPTDateTime" />
+          <ScalarProperty Name="P_UpdateOPTCD" ColumnName="P_UpdateOPTCD" />
+          <ScalarProperty Name="P_UpdateOPTDateTime" ColumnName="P_UpdateOPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Roof">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Roof">
+        <MappingFragment StoreEntitySet="M_Roof">
+          <ScalarProperty Name="R_CD" ColumnName="R_CD" />
+          <ScalarProperty Name="R_Type" ColumnName="R_Type" />
+          <ScalarProperty Name="R_IsDeleted" ColumnName="R_IsDeleted" />
+          <ScalarProperty Name="R_InsertOPTCD" ColumnName="R_InsertOPTCD" />
+          <ScalarProperty Name="R_InsetOPTDateTime" ColumnName="R_InsetOPTDateTime" />
+          <ScalarProperty Name="R_UpdateOPTCD" ColumnName="R_UpdateOPTCD" />
+          <ScalarProperty Name="R_UpdateOPTDateTime" ColumnName="R_UpdateOPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Transportation">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.M_Transportation">
+        <MappingFragment StoreEntitySet="M_Transportation">
+          <ScalarProperty Name="T_CD" ColumnName="T_CD" />
+          <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+          <ScalarProperty Name="T_Isdeleted" ColumnName="T_Isdeleted" />
+          <ScalarProperty Name="T_InsertOPT_CD" ColumnName="T_InsertOPT_CD" />
+          <ScalarProperty Name="T_InsertOPT_DateTime" ColumnName="T_InsertOPT_DateTime" />
+          <ScalarProperty Name="T_UpdateOPT_CD" ColumnName="T_UpdateOPT_CD" />
+          <ScalarProperty Name="T_UpdateOPT_DateTime" ColumnName="T_UpdateOPT_DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_Booking">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.Master_Booking">
+        <MappingFragment StoreEntitySet="Master_Booking">
+          <ScalarProperty Name="Booking_CD" ColumnName="Booking_CD" />
+          <ScalarProperty Name="Booking_STD_CD" ColumnName="Booking_STD_CD" />
+          <ScalarProperty Name="Booking_Name" ColumnName="Booking_Name" />
+          <ScalarProperty Name="Booking_Time" ColumnName="Booking_Time" />
+          <ScalarProperty Name="Booking_Date" ColumnName="Booking_Date" />
+          <ScalarProperty Name="Booking_Flag_CD" ColumnName="Booking_Flag_CD" />
+          <ScalarProperty Name="Booking_Isdeleted" ColumnName="Booking_Isdeleted" />
+          <ScalarProperty Name="Booking_Insert_OPTCD" ColumnName="Booking_Insert_OPTCD" />
+          <ScalarProperty Name="Booking_Insert_OPTDateTime" ColumnName="Booking_Insert_OPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_OPT">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.Master_OPT">
+        <MappingFragment StoreEntitySet="Master_OPT">
+          <ScalarProperty Name="OPT_CD" ColumnName="OPT_CD" />
+          <ScalarProperty Name="OPT_ID" ColumnName="OPT_ID" />
+          <ScalarProperty Name="OPT_Name" ColumnName="OPT_Name" />
+          <ScalarProperty Name="OPT_Password" ColumnName="OPT_Password" />
+          <ScalarProperty Name="OPT_Level_CD" ColumnName="OPT_Level_CD" />
+          <ScalarProperty Name="OPT_Phone" ColumnName="OPT_Phone" />
+          <ScalarProperty Name="OPT_Photo" ColumnName="OPT_Photo" />
+          <ScalarProperty Name="OPT_Owner" ColumnName="OPT_Owner" />
+          <ScalarProperty Name="OPT_Address" ColumnName="OPT_Address" />
+          <ScalarProperty Name="OPT_Comment" ColumnName="OPT_Comment" />
+          <ScalarProperty Name="OPT_IsDeleted" ColumnName="OPT_IsDeleted" />
+          <ScalarProperty Name="OPT_Insert_OPTCD" ColumnName="OPT_Insert_OPTCD" />
+          <ScalarProperty Name="OPT_Insert_OPTDateTime" ColumnName="OPT_Insert_OPTDateTime" />
+          <ScalarProperty Name="OPT_Update_OPTCD" ColumnName="OPT_Update_OPTCD" />
+          <ScalarProperty Name="OPT_Update_OPTDateTime" ColumnName="OPT_Update_OPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_STD">
+      <EntityTypeMapping TypeName="SOCCERDAYModel.Master_STD">
+        <MappingFragment StoreEntitySet="Master_STD">
+          <ScalarProperty Name="STD_CD" ColumnName="STD_CD" />
+          <ScalarProperty Name="STD_OPT_CD" ColumnName="STD_OPT_CD" />
+          <ScalarProperty Name="STD_Name" ColumnName="STD_Name" />
+          <ScalarProperty Name="STD_Owner" ColumnName="STD_Owner" />
+          <ScalarProperty Name="STD_Map" ColumnName="STD_Map" />
+          <ScalarProperty Name="STD_Photos" ColumnName="STD_Photos" />
+          <ScalarProperty Name="STD_Transportation_CD" ColumnName="STD_Transportation_CD" />
+          <ScalarProperty Name="STD_Offers_CD" ColumnName="STD_Offers_CD" />
+          <ScalarProperty Name="STD_Fees" ColumnName="STD_Fees" />
+          <ScalarProperty Name="STD_Discount" ColumnName="STD_Discount" />
+          <ScalarProperty Name="STD_FloorType_CD" ColumnName="STD_FloorType_CD" />
+          <ScalarProperty Name="STD_Roof_CD" ColumnName="STD_Roof_CD" />
+          <ScalarProperty Name="STD_RatingLevel" ColumnName="STD_RatingLevel" />
+          <ScalarProperty Name="STD_PhoneNo" ColumnName="STD_PhoneNo" />
+          <ScalarProperty Name="STD_TownShip_CD" ColumnName="STD_TownShip_CD" />
+          <ScalarProperty Name="STD_Comment" ColumnName="STD_Comment" />
+          <ScalarProperty Name="STD_PayMentType_CD" ColumnName="STD_PayMentType_CD" />
+          <ScalarProperty Name="STD_LocationAddress" ColumnName="STD_LocationAddress" />
+          <ScalarProperty Name="STD_FBAddress" ColumnName="STD_FBAddress" />
+          <ScalarProperty Name="STD_WebSiteAddress" ColumnName="STD_WebSiteAddress" />
+          <ScalarProperty Name="STD_EmailAddress" ColumnName="STD_EmailAddress" />
+          <ScalarProperty Name="STD_IsDeleted" ColumnName="STD_IsDeleted" />
+          <ScalarProperty Name="STD_InsertOPTCD" ColumnName="STD_InsertOPTCD" />
+          <ScalarProperty Name="STD_InsertOPTDateTime" ColumnName="STD_InsertOPTDateTime" />
+          <ScalarProperty Name="STD_Update_OPTCD" ColumnName="STD_Update_OPTCD" />
+          <ScalarProperty Name="STD_Update_OPTDateTime" ColumnName="STD_Update_OPTDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

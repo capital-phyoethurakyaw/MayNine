@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SOCCERDAYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="M_Floor">
+    <Key>
+      <PropertyRef Name="F_CD" />
+    </Key>
+    <Property Name="F_CD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="F_Type" Type="varchar" MaxLength="50" />
+    <Property Name="F_IsDeleted" Type="bit" />
+    <Property Name="F_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="F_InsertOPTDateTime" Type="datetime" />
+    <Property Name="F_UpdateOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="F_UpdateOPTDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Offers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Offers">
+    <Key>
+      <PropertyRef Name="O_CD" />
+    </Key>
+    <Property Name="O_CD" Type="int" Nullable="false" />
+    <Property Name="O_Type" Type="varbinary" MaxLength="50" />
+    <Property Name="O_IsDeleted" Type="bit" />
+    <Property Name="O_InsertOPT_CD" Type="varchar" MaxLength="50" />
+    <Property Name="O_InsertOPT_Datetime" Type="datetime" />
+    <Property Name="O_UpdateOPT_CD" Type="varchar" MaxLength="50" />
+    <Property Name="O_UpdateOPT_DateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Payment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Payment">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="int" Nullable="false" />
+    <Property Name="P_Type" Type="varchar" MaxLength="50" />
+    <Property Name="P_IsDeleted" Type="bit" />
+    <Property Name="P_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="P_InsertOPTDateTime" Type="datetime" />
+    <Property Name="P_UpdateOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="P_UpdateOPTDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Roof' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Roof">
+    <Key>
+      <PropertyRef Name="R_CD" />
+    </Key>
+    <Property Name="R_CD" Type="int" Nullable="false" />
+    <Property Name="R_Type" Type="varchar" MaxLength="50" />
+    <Property Name="R_IsDeleted" Type="bit" />
+    <Property Name="R_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="R_InsetOPTDateTime" Type="datetime" />
+    <Property Name="R_UpdateOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="R_UpdateOPTDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_TownShp">
+    <Key>
+      <PropertyRef Name="T_CD" />
+    </Key>
+    <Property Name="T_CD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="T_Type" Type="varchar" MaxLength="50" />
+    <Property Name="T_IsDeleted" Type="bit" />
+    <Property Name="T_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="T_InsertOPTDateTime" Type="datetime" />
+    <Property Name="T_UpdateOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="T_UpdateOPTDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.M_Transportation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="M_Transportation">
+    <Key>
+      <PropertyRef Name="T_CD" />
+    </Key>
+    <Property Name="T_CD" Type="int" Nullable="false" />
+    <Property Name="T_Type" Type="varchar" MaxLength="50" />
+    <Property Name="T_Isdeleted" Type="bit" />
+    <Property Name="T_InsertOPT_CD" Type="varchar" MaxLength="50" />
+    <Property Name="T_InsertOPT_DateTime" Type="datetime" />
+    <Property Name="T_UpdateOPT_CD" Type="varchar" MaxLength="50" />
+    <Property Name="T_UpdateOPT_DateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_Booking' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Master_Booking">
+    <Key>
+      <PropertyRef Name="Booking_CD" />
+    </Key>
+    <Property Name="Booking_CD" Type="int" Nullable="false" />
+    <Property Name="Booking_STD_CD" Type="int" />
+    <Property Name="Booking_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Booking_Time" Type="time" Precision="7" />
+    <Property Name="Booking_Date" Type="datetime" />
+    <Property Name="Booking_Flag_CD" Type="tinyint" />
+    <Property Name="Booking_Isdeleted" Type="bit" />
+    <Property Name="Booking_Insert_OPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="Booking_Insert_OPTDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_OPT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Master_OPT">
+    <Key>
+      <PropertyRef Name="OPT_CD" />
+    </Key>
+    <Property Name="OPT_CD" Type="int" Nullable="false" />
+    <Property Name="OPT_ID" Type="varchar" MaxLength="10" />
+    <Property Name="OPT_Name" Type="varchar" MaxLength="50" />
+    <Property Name="OPT_Password" Type="varchar" MaxLength="15" />
+    <Property Name="OPT_Level_CD" Type="int" />
+    <Property Name="OPT_Phone" Type="varchar" MaxLength="50" />
+    <Property Name="OPT_Photo" Type="binary" MaxLength="500" />
+    <Property Name="OPT_Owner" Type="bit" />
+    <Property Name="OPT_Address" Type="varchar" MaxLength="500" />
+    <Property Name="OPT_Comment" Type="varchar" MaxLength="500" />
+    <Property Name="OPT_IsDeleted" Type="bit" />
+    <Property Name="OPT_Insert_OPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="OPT_Insert_OPTDateTime" Type="datetime" />
+    <Property Name="OPT_Update_OPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="OPT_Update_OPTDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SOCCERDAY.dbo.Master_STD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Master_STD">
+    <Key>
+      <PropertyRef Name="STD_CD" />
+    </Key>
+    <Property Name="STD_CD" Type="int" Nullable="false" />
+    <Property Name="STD_OPT_CD" Type="int" />
+    <Property Name="STD_Name" Type="varchar" MaxLength="50" />
+    <Property Name="STD_Owner" Type="bit" />
+    <Property Name="STD_Map" Type="geography" />
+    <Property Name="STD_Photos" Type="binary" MaxLength="1024" />
+    <Property Name="STD_Transportation_CD" Type="int" />
+    <Property Name="STD_Offers_CD" Type="int" />
+    <Property Name="STD_Fees" Type="money" />
+    <Property Name="STD_Discount" Type="money" />
+    <Property Name="STD_FloorType_CD" Type="varchar" MaxLength="50" />
+    <Property Name="STD_Roof_CD" Type="int" />
+    <Property Name="STD_RatingLevel" Type="tinyint" />
+    <Property Name="STD_PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="STD_TownShip_CD" Type="int" />
+    <Property Name="STD_Comment" Type="varchar" MaxLength="500" />
+    <Property Name="STD_PayMentType_CD" Type="int" />
+    <Property Name="STD_LocationAddress" Type="varchar" MaxLength="200" />
+    <Property Name="STD_FBAddress" Type="varchar" MaxLength="50" />
+    <Property Name="STD_WebSiteAddress" Type="varchar" MaxLength="50" />
+    <Property Name="STD_EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="STD_IsDeleted" Type="bit" />
+    <Property Name="STD_InsertOPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="STD_InsertOPTDateTime" Type="datetime" />
+    <Property Name="STD_Update_OPTCD" Type="varchar" MaxLength="50" />
+    <Property Name="STD_Update_OPTDateTime" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="SOCCERDAYModelStoreContainer">
+    <EntitySet Name="M_Floor" EntityType="Self.M_Floor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="M_TownShp" EntityType="Self.M_TownShp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="M_Offers" EntityType="Self.M_Offers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Offers].[O_CD] AS [O_CD], 
+    [M_Offers].[O_Type] AS [O_Type], 
+    [M_Offers].[O_IsDeleted] AS [O_IsDeleted], 
+    [M_Offers].[O_InsertOPT_CD] AS [O_InsertOPT_CD], 
+    [M_Offers].[O_InsertOPT_Datetime] AS [O_InsertOPT_Datetime], 
+    [M_Offers].[O_UpdateOPT_CD] AS [O_UpdateOPT_CD], 
+    [M_Offers].[O_UpdateOPT_DateTime] AS [O_UpdateOPT_DateTime]
+    FROM [dbo].[M_Offers] AS [M_Offers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Payment" EntityType="Self.M_Payment" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Payment].[P_ID] AS [P_ID], 
+    [M_Payment].[P_Type] AS [P_Type], 
+    [M_Payment].[P_IsDeleted] AS [P_IsDeleted], 
+    [M_Payment].[P_InsertOPTCD] AS [P_InsertOPTCD], 
+    [M_Payment].[P_InsertOPTDateTime] AS [P_InsertOPTDateTime], 
+    [M_Payment].[P_UpdateOPTCD] AS [P_UpdateOPTCD], 
+    [M_Payment].[P_UpdateOPTDateTime] AS [P_UpdateOPTDateTime]
+    FROM [dbo].[M_Payment] AS [M_Payment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Roof" EntityType="Self.M_Roof" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Roof].[R_CD] AS [R_CD], 
+    [M_Roof].[R_Type] AS [R_Type], 
+    [M_Roof].[R_IsDeleted] AS [R_IsDeleted], 
+    [M_Roof].[R_InsertOPTCD] AS [R_InsertOPTCD], 
+    [M_Roof].[R_InsetOPTDateTime] AS [R_InsetOPTDateTime], 
+    [M_Roof].[R_UpdateOPTCD] AS [R_UpdateOPTCD], 
+    [M_Roof].[R_UpdateOPTDateTime] AS [R_UpdateOPTDateTime]
+    FROM [dbo].[M_Roof] AS [M_Roof]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Transportation" EntityType="Self.M_Transportation" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [M_Transportation].[T_CD] AS [T_CD], 
+    [M_Transportation].[T_Type] AS [T_Type], 
+    [M_Transportation].[T_Isdeleted] AS [T_Isdeleted], 
+    [M_Transportation].[T_InsertOPT_CD] AS [T_InsertOPT_CD], 
+    [M_Transportation].[T_InsertOPT_DateTime] AS [T_InsertOPT_DateTime], 
+    [M_Transportation].[T_UpdateOPT_CD] AS [T_UpdateOPT_CD], 
+    [M_Transportation].[T_UpdateOPT_DateTime] AS [T_UpdateOPT_DateTime]
+    FROM [dbo].[M_Transportation] AS [M_Transportation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Master_Booking" EntityType="Self.Master_Booking" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Master_Booking].[Booking_CD] AS [Booking_CD], 
+    [Master_Booking].[Booking_STD_CD] AS [Booking_STD_CD], 
+    [Master_Booking].[Booking_Name] AS [Booking_Name], 
+    [Master_Booking].[Booking_Time] AS [Booking_Time], 
+    [Master_Booking].[Booking_Date] AS [Booking_Date], 
+    [Master_Booking].[Booking_Flag_CD] AS [Booking_Flag_CD], 
+    [Master_Booking].[Booking_Isdeleted] AS [Booking_Isdeleted], 
+    [Master_Booking].[Booking_Insert_OPTCD] AS [Booking_Insert_OPTCD], 
+    [Master_Booking].[Booking_Insert_OPTDateTime] AS [Booking_Insert_OPTDateTime]
+    FROM [dbo].[Master_Booking] AS [Master_Booking]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Master_OPT" EntityType="Self.Master_OPT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Master_OPT].[OPT_CD] AS [OPT_CD], 
+    [Master_OPT].[OPT_ID] AS [OPT_ID], 
+    [Master_OPT].[OPT_Name] AS [OPT_Name], 
+    [Master_OPT].[OPT_Password] AS [OPT_Password], 
+    [Master_OPT].[OPT_Level_CD] AS [OPT_Level_CD], 
+    [Master_OPT].[OPT_Phone] AS [OPT_Phone], 
+    [Master_OPT].[OPT_Photo] AS [OPT_Photo], 
+    [Master_OPT].[OPT_Owner] AS [OPT_Owner], 
+    [Master_OPT].[OPT_Address] AS [OPT_Address], 
+    [Master_OPT].[OPT_Comment] AS [OPT_Comment], 
+    [Master_OPT].[OPT_IsDeleted] AS [OPT_IsDeleted], 
+    [Master_OPT].[OPT_Insert_OPTCD] AS [OPT_Insert_OPTCD], 
+    [Master_OPT].[OPT_Insert_OPTDateTime] AS [OPT_Insert_OPTDateTime], 
+    [Master_OPT].[OPT_Update_OPTCD] AS [OPT_Update_OPTCD], 
+    [Master_OPT].[OPT_Update_OPTDateTime] AS [OPT_Update_OPTDateTime]
+    FROM [dbo].[Master_OPT] AS [Master_OPT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Master_STD" EntityType="Self.Master_STD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Master_STD].[STD_CD] AS [STD_CD], 
+    [Master_STD].[STD_OPT_CD] AS [STD_OPT_CD], 
+    [Master_STD].[STD_Name] AS [STD_Name], 
+    [Master_STD].[STD_Owner] AS [STD_Owner], 
+    [Master_STD].[STD_Map] AS [STD_Map], 
+    [Master_STD].[STD_Photos] AS [STD_Photos], 
+    [Master_STD].[STD_Transportation_CD] AS [STD_Transportation_CD], 
+    [Master_STD].[STD_Offers_CD] AS [STD_Offers_CD], 
+    [Master_STD].[STD_Fees] AS [STD_Fees], 
+    [Master_STD].[STD_Discount] AS [STD_Discount], 
+    [Master_STD].[STD_FloorType_CD] AS [STD_FloorType_CD], 
+    [Master_STD].[STD_Roof_CD] AS [STD_Roof_CD], 
+    [Master_STD].[STD_RatingLevel] AS [STD_RatingLevel], 
+    [Master_STD].[STD_PhoneNo] AS [STD_PhoneNo], 
+    [Master_STD].[STD_TownShip_CD] AS [STD_TownShip_CD], 
+    [Master_STD].[STD_Comment] AS [STD_Comment], 
+    [Master_STD].[STD_PayMentType_CD] AS [STD_PayMentType_CD], 
+    [Master_STD].[STD_LocationAddress] AS [STD_LocationAddress], 
+    [Master_STD].[STD_FBAddress] AS [STD_FBAddress], 
+    [Master_STD].[STD_WebSiteAddress] AS [STD_WebSiteAddress], 
+    [Master_STD].[STD_EmailAddress] AS [STD_EmailAddress], 
+    [Master_STD].[STD_IsDeleted] AS [STD_IsDeleted], 
+    [Master_STD].[STD_InsertOPTCD] AS [STD_InsertOPTCD], 
+    [Master_STD].[STD_InsertOPTDateTime] AS [STD_InsertOPTDateTime], 
+    [Master_STD].[STD_Update_OPTCD] AS [STD_Update_OPTCD], 
+    [Master_STD].[STD_Update_OPTDateTime] AS [STD_Update_OPTDateTime]
+    FROM [dbo].[Master_STD] AS [Master_STD]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
